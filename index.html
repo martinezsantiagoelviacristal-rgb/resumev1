@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XV Años Itzel</title>
+
+<!-- Fuente -->
+<link href="https://fonts.cdnfonts.com/css/fresh-papaya" rel="stylesheet">
+
+<style>
+
+    audio{
+        display:none;
+    }
+
+    body{
+        margin:0;
+        font-family:'Fresh Papaya', cursive;
+        background:linear-gradient(to bottom,#f3e5f5,#d1b3ff);
+        color:#4a148c;
+        text-align:center;
+        overflow-x:hidden;
+    }
+
+    .container{
+        padding:40px 20px;
+        position:relative;
+    }
+
+    /* BOTÓN MÚSICA */
+    .music-button{
+        background:none;
+        border:none;
+        cursor:pointer;
+        padding:0;
+        transition:0.3s;
+    }
+
+    .music-button:hover{
+        transform:scale(1.05);
+    }
+
+    /* RAPUNZEL */
+    .rapunzel-left,
+    .rapunzel-right{
+        position:fixed;
+        top:50%;
+        transform:translateY(-50%);
+        width:300px;
+        z-index:0;
+        pointer-events:none;
+    }
+
+    .rapunzel-left{
+        left:5px;
+    }
+
+    .rapunzel-right{
+        right:5px;
+    }
+
+    h1{
+        font-size:4em;
+        color:#7b1fa2;
+        margin-bottom:10px;
+        text-shadow:2px 2px 8px rgba(255,255,255,0.8);
+    }
+
+    h2{
+        font-size:2em;
+        font-weight:normal;
+        margin-bottom:20px;
+    }
+
+    .card{
+        background:rgba(255,255,255,0.88);
+        border-radius:25px;
+        padding:35px;
+        max-width:650px;
+        margin:auto;
+        box-shadow:0 12px 30px rgba(0,0,0,0.25);
+        border:3px solid #d4af37;
+        position:relative;
+        z-index:2;
+    }
+
+    .highlight{
+        color:#ab47bc;
+        font-weight:bold;
+    }
+
+    .gold{
+        color:#d4af37;
+        font-weight:bold;
+        font-size:1.5em;
+    }
+
+    .section{
+        margin:25px 0;
+        font-size:1.3em;
+    }
+
+    .footer{
+        margin-top:30px;
+        font-size:1.1em;
+        color:#6a1b9a;
+        position:relative;
+        z-index:2;
+    }
+
+    .lanterns{
+        font-size:3em;
+        animation:float 3s ease-in-out infinite;
+        margin-bottom:20px;
+        position:relative;
+        z-index:2;
+    }
+
+    @keyframes float{
+        0%,100%{
+            transform:translateY(0);
+        }
+        50%{
+            transform:translateY(-10px);
+        }
+    }
+
+    @media(max-width:768px){
+
+        .rapunzel-left,
+        .rapunzel-right{
+            width:300px;
+            opacity:0.5;
+        }
+
+        h1{
+            font-size:3em;
+        }
+
+        .card{
+            padding:25px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="music" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5f2f6f9d62.mp3?filename=fairy-tale-waltz-110624.mp3" type="audio/mpeg">
+</audio>
+
+<!-- BOTÓN DE MÚSICA -->
+<div style="
+display:flex;
+justify-content:center;
+align-items:center;
+gap:0;
+margin-top:20px;
+position:relative;
+z-index:10;
+">
+
+    <!-- CORONA IZQUIERDA -->
+    <img 
+    src="corona1.jpg"
+    alt="Corona izquierda"
+    style="
+    width:150px;
+    height:auto;
+    margin-right:-35px;
+    background:transparent;
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.8));
+    ">
+
+    <!-- REPRODUCTOR -->
+    <button class="music-button" onclick="toggleMusic()">
+
+        <img 
+        src="musica.png"
+        alt="Control Música"
+
+        style="
+        width:150px;
+        max-width:90vw;
+        background:transparent;
+        mix-blend-mode:multiply;
+        object-fit:contain;
+        filter:drop-shadow(0 0 2px rgba(0,0,0,0.15));
+        ">
+    </button>
+
+    <!-- CORONA DERECHA -->
+    <img 
+    src="corona2.jpg"
+    alt="Corona derecha"
+
+    style="
+    width:150px;
+    height:auto;
+    margin-left:-35px;
+    transform:scaleX(-1);
+    background:transparent;
+    filter:drop-shadow(0 0 10px rgba(212,175,55,0.8));
+    ">
+
+</div>
+
+<!-- RAPUNZEL -->
+<img 
+class="rapunzel-left"
+src="icono.png"
+alt="Rapunzel izquierda">
+
+<img 
+class="rapunzel-right"
+src="rap2.png"
+alt="Rapunzel derecha">
+
+<div class="container">
+
+
+    <h2>Con la bendición de Dios</h2>
+
+    <h1>Itzel</h1>
+
+    <h2>Mis XV Años</h2>
+
+    <div class="card">
+
+        <div class="section">
+            <p>
+            Con gran alegría te invitamos a celebrar
+            este momento tan especial
+            </p>
+        </div>
+
+        <div class="section">
+            <p class="gold">22 de diciembre de 2026</p>
+            <p class="highlight">12:00 p.m.</p>
+        </div>
+
+        <div class="section">
+            <p><strong>Ceremonia Religiosa</strong></p>
+            <p>Parroquia de San Agustín</p>
+            <p>Xilitla, S.L.P.</p>
+        </div>
+
+        <div class="section">
+            <p><strong>Recepción</strong></p>
+            <p>Tlahuilapa</p>
+        </div>
+
+        <div class="section">
+            <p><strong>Mis Padres</strong></p>
+            <p>Camelia Bartolo Martínez</p>
+            <p>Antonio Manuel Félix</p>
+        </div>
+
+        <div class="section">
+            <p><strong>Padrinos</strong></p>
+            <p>Obdulia Bartolo Martínez</p>
+            <p>Baltazar Manuel Martínez</p>
+        </div>
+
+        <div class="section">
+            <p><strong>Código de vestimenta:</strong></p>
+            <p class="highlight">Formal</p>
+            <p>
+            Favor de evitar el color
+            <span class="highlight">lila</span>
+            </p>
+        </div>
+
+        <div class="section">
+            <p>¡Esperamos contar con tu presencia!</p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>
+        ✨ "Y en ese momento, todo brilló como un sueño..." ✨
+        </p>
+    </div>
+
+</div>
+
+<script>
+
+const music = document.getElementById('music');
+
+let isPlaying = false;
+
+function toggleMusic(){
+
+    if(isPlaying){
+
+        music.pause();
+
+    }else{
+
+        music.play();
+
+    }
+
+    isPlaying = !isPlaying;
+}
+
+</script>
+
+</body>
+</html>
